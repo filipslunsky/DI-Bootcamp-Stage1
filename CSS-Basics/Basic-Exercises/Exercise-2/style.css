@@ -1,0 +1,19 @@
+.basic {
+    background-color: #ffa7a7;
+    font-family: Verdana;
+  }
+  
+  .cooler {
+    font-size: 24px;
+  }
+  
+  #num2 {
+    color: #0000ff;
+    font-size: 36px;
+  }
+  
+  #num4 {
+    background-color: #80ff80;
+    font-size: 24px;
+    font-weight: bold;
+  }

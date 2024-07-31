@@ -1,0 +1,36 @@
+body {
+    background-color: #E2AC7F;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 5px dotted black;
+}
+
+p {
+    padding: 10px 20px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    font-style: italic;
+}
+
+.first-letter {
+    font-size: 1.8em;
+}
+
+.copyright {
+    text-align: center;
+}
+
+#wrap {
+    background-color: #F5F5DC;
+    margin: 10px 300px;
+    border: 5px dotted black;
+}
