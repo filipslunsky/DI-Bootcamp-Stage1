@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table and Form</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>name 1</th>
+                <th>name 2</th>
+                <th>name 3</th>
+                <th>name 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cont 1</td>
+                <td>cont 2</td>
+                <td>cont 3</td>
+                <td>cont 4</td>
+            </tr>
+            <tr>
+                <td>cont 5</td>
+                <td>cont 6</td>
+                <td>cont 7</td>
+                <td>cont 8</td>
+            </tr>
+            <tr>
+                <td>cont 9</td>
+                <td>cont 10</td>
+                <td>cont 11</td>
+                <td>cont 12</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>foot 1</td>
+                <td>foot 2</td>
+                <td>foot 3</td>
+                <td>foot 4</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <form action="#">
+        <label for="first-name">First Name: </label>
+        <input type="text" id="first-name" name="first-name">
+        <br>
+        <label for="last-name">Last Name: </label>
+        <input type="text" id="last-name" name="last-name">
+        <br>
+        <input type="submit" value="Send">
+    </form>
+
+    <form action="#">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div>
+            <label>Favorite Instructor</label>
+    
+            <label for="elie">Elie</label>
+            <input type="radio" name="favorite_instructor" id="elie" value="elie">
+            <label for="matt">Matt</label>
+            <input type="radio" name="favorite_instructor" id="matt" value="matt" checked>
+            <label for="tim">Tim</label>
+            <input type="radio" name="favorite_instructor" id="tim" value="tim">
+        </div>
+        <div>
+            <label>Where do you live</label>
+    
+            <select name="city">
+                <option value="Paris">Paris</option>
+                <option value="NY">New York</option>
+                <option value="TLV" selected>Tel Aviv</option>
+            </select>
+        </div>
+        <div>
+            <label>Favorite Programming Language(s)</label>
+    
+            <label for="ruby">Ruby</label>
+            <input type="checkbox" name="favorite_language1" value="Ruby" id="ruby">
+            <label for="javascript">JavaScript</label>
+            <input type="checkbox" name="favorite_language2" value="JavaScript" id="javascript">
+            <label for="python">Python</label>
+            <input type="checkbox" name="favorite_language3" value="Python" id="python">
+        </div>
+        <div>
+            <label>Additional Comments</label>
+            <textarea name="comments" id="com" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="click to submit">
+        </div>
+    </form>
+</body>
+</html>
