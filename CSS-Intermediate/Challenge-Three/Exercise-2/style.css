@@ -1,0 +1,32 @@
+.navbar {
+    background-color: #800080;
+    height: 150px;
+    width: 100%;
+    margin: 1px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.item {
+    display: inline-block;
+    height: 300px;
+    flex-grow: 1;
+    margin: 1px;
+    
+}
+
+.one {
+    background-color: #ff0000;
+}
+
+.two {
+    background-color: #00ff11;
+}
+
+.three {
+    background-color: #ffbf00;
+}

@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+}
+
+.short-item {
+    background-color: #d37a7a;
+    height: 170px;
+    margin: 5px;
+    flex-grow: 1;
+}
+
+.long-item {
+    background-color: #20e6f5;
+    height: 170px;
+    margin: 5px;
+    flex-grow: 3;
+}
+
+footer {
+    background-color: #afaf6d;
+    width: 100%;
+    height: 150px;
+    margin-top: 5px;
+}
