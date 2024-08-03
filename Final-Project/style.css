@@ -1,93 +1,96 @@
 body {
-    font-family: "Teachers", sans-serif;
-    background-color: #FFEBA7;
+  font-family: "Teachers", sans-serif;
+  background-color: #ffeba7;
 }
 
 h1 {
-    font-size: 50px;
-    text-align: center;
-    font-family: "Caveat", cursive;
-    padding-top: 20px;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  padding-top: 20px;
 }
 
-p, li {
-    padding: 5px 20px;
+p,
+li {
+  padding: 5px 20px;
 }
 
 .main-menu-container {
-    background-color: #D8BF68;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    font-weight: bold;
+  background-color: #d8bf68;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  font-weight: bold;
 }
 
 .movie {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .video-item {
-    width: fit-content;
-    border-radius: 60px;
-    margin-bottom: 35px;
+  width: fit-content;
+  border-radius: 60px;
+  margin-bottom: 35px;
 }
 
 .quote {
-    font-size: 20px;
-    font-family: "Caveat", cursive;
-    margin: 0 30px 0 0;
-    text-align: right;
+  font-size: 20px;
+  font-family: "Caveat", cursive;
+  margin: 0 30px 0 0;
+  text-align: right;
 }
 
 .main-menu-item {
-    color: black;
+  color: black;
 }
 
 .header-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .photo-container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .photo {
-    border-radius: 15px;
-    padding: 10px;
+  border-radius: 15px;
+  padding: 10px;
 }
 
 .landscape {
-    width: 50%;
+  width: 50%;
 }
 
 .portrait {
-    width: 33%;
+  width: 33%;
 }
 
-.portrait, .landscape {
-    transition: all 1s;
+.portrait,
+.landscape {
+  transition: all 1s;
 }
 
-.portrait:hover, .landscape:hover {
-    transform: scale(1.07);
+.portrait:hover,
+.landscape:hover {
+  transform: scale(1.07);
 }
 
 .small {
-    height: 300px;
-    float: left;
-    margin-left: 18px;
+  height: 300px;
+  float: left;
+  margin-left: 18px;
 }
 
 .current {
-    color: #FFEBA7;
+  color: #ffeba7;
 }
