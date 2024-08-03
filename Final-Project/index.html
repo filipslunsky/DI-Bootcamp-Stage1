@@ -21,7 +21,7 @@
 </head>
 <body>
         <!--navbar referencing to other webpages within this wesite-->
-        <div class="main-menu-container">
+        <div class="main-menu-container  lime darken-3">
             <a href="#" class="main-menu-item current">Imrich Lichtenfeld</a>
             <a href="/biography.html" class="main-menu-item">Biography</a>
             <a href="/kravmaga.html" class="main-menu-item">Krav Maga</a>
@@ -37,7 +37,7 @@
                 <p class="quote"><i>founder of krav maga</i></p>
             </div>
         </header>
-
+        <!-- main section of the page, the first part is flexbox with images, the second is a timeline of bio in the form of Materialize collection -->
         <main class="photo-container">
             <img src="/img/imi-2.png" class="landscape photo" alt="very old photo of Imi training with a knife">
             <img src="/img/imi-1.png" class="landscape photo" alt="old photos of Imi in IDF">
@@ -46,33 +46,36 @@
             <img src="/img/imi-5.png" class="portrait photo" alt="old Imi wearing a black belt">
             <img src="/img/imi-6.png" class="portrait photo" alt="old photo of Imi throwing a guy">
             <img src="/img/imi-7.png" class="portrait photo" alt="old photo of Imi dealing with a knife threat">
-        </main>
+
+        <!--biography timeline section-->
+        <div class="container">
         <article>
             <h1>Imi's Life</h1>
-            <!--biography timeline section-->
     <div class="container">
         <ul class="collection">
             <li class="collection-item grey lighten-2">on the 26th May 1910 Imi was born in Budapest, the Austro-hungarian Empire</li>
-            <li class="collection-item">in 1928 he won the Slovak Youth Wrestling Championship</li>
+            <li class="collection-item yellow lighten-5">in 1928 he won the Slovak Youth Wrestling Championship</li>
             <li class="collection-item grey lighten-2">in 1929 the adult championship in the light and middleweight divisions</li>
-            <li class="collection-item">in the late 1930s anti-Semitic riots threatened the Jewish population of Bratislava in Europe so Imi together with other Jewish boxers and wrestlers, helped to defend his Jewish neighborhood against fascist gangs</li>
+            <li class="collection-item yellow lighten-5">in the late 1930s anti-Semitic riots threatened the Jewish population of Bratislava in Europe so Imi together with other Jewish boxers and wrestlers, helped to defend his Jewish neighborhood against fascist gangs</li>
             <li class="collection-item grey lighten-2">in 1935 Imi visited Mandatory Palestine with a team of Jewish wrestlers to participate in the Maccabiah Games but could not participate because of a broken rib that resulted from his training while en route. This led to the fundamental Krav Maga rule - “do not get hurt while training”</li>
-            <li class="collection-item">in 1940 Imi fled the rise of Nazism in Slovakia, heading for Palestine on the Aliyah Bet vessel, Pencho, which shipwrecked on the Dodecanese Islands in the Aegean Sea</li>
+            <li class="collection-item yellow lighten-5">in 1940 Imi fled the rise of Nazism in Slovakia, heading for Palestine on the Aliyah Bet vessel, Pencho, which shipwrecked on the Dodecanese Islands in the Aegean Sea</li>
             <li class="collection-item grey lighten-2">in 1942 after serving with distinction in the British supervised Czechoslovak 11th Infantry Battalion in North Africa reached Palestine</li>
-            <li class="collection-item">in 1944 Lichtenfeld began training Haganah fighters in his areas of expertise: physical fitness, swimming, wrestling, use of the knife, and defenses against knife attacks</li>
+            <li class="collection-item yellow lighten-5">in 1944 Lichtenfeld began training Haganah fighters in his areas of expertise: physical fitness, swimming, wrestling, use of the knife, and defenses against knife attacks</li>
             <li class="collection-item grey lighten-2">in 1948 when the State of Israel was founded and the IDF was formed, Lichtenfeld became Chief Instructor for Physical Fitness and Krav Maga at the IDF School of Combat Fitness</li>
-            <li class="collection-item">in 1964 Imi retired from the Israeli Military Forces</li>
+            <li class="collection-item yellow lighten-5">in 1964 Imi retired from the Israeli Military Forces</li>
             <li class="collection-item grey lighten-2">spent later years modifying Krav Maga to fit the needs of police forces and ordinary civilians mostly in Netanya and Tel Aviv, Israel</li>
-            <li class="collection-item">on 22 October 1978 he created the Israeli Krav Maga Association (IKMA)</li>
+            <li class="collection-item yellow lighten-5">on 22 October 1978 he created the Israeli Krav Maga Association (IKMA)</li>
             <li class="collection-item grey lighten-2">in 1995 he founded the International Krav Maga Federation (IKMF)</li>
-            <li class="collection-item">on 9 January 1998 Lichtenfeld died in Netanya, Israel, at the age of 87</li>
-            <li class="collection-item">more about Imi's life is <a href="/biography.html">here</a></li>
+            <li class="collection-item yellow lighten-5">on 9 January 1998 Lichtenfeld died in Netanya, Israel, at the age of 87</li>
+            <li class="collection-item grey lighten-2">more about Imi's life is <a href="/biography.html">here</a></li>
         </ul>
     </div>
+</div>
         </article>
+    </main>
 
         <!--footer section-->
-    <footer class="page-footer footer-stripe black-text">
+    <footer class="page-footer black-text lime darken-3">
         <div class="container">
             <div class="row">
                 <div class="col s12">
@@ -82,8 +85,9 @@
                 </div>
             </div>
         </div>
-        <div class="footer copyright grey darken-1"><p class="center">&copy; 2024 Filip Slunsky</p></div>
+        <div class="footer copyright grey lighten-1"><p class="center">&copy; 2024 Filip Slunsky</p></div>
     </footer>
- 
+    
+    <!-- the following script is part of Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
