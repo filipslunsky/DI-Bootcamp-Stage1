@@ -38,3 +38,22 @@ print(adv_say_hello("Joe", "HE")) # positional arguments, respect the order of d
 
 print(adv_say_hello(language = "ES", name = "Joe")) # keyword arguments
 
+# default arguments - in case the user doesn't input one of the arguments, we can build in default values for them
+
+
+def adv_say_hello(name, language = "EN"):
+    if language == "HE":
+        return f"Shalom, {name}"
+    elif language == "PT":
+        return f"Oi, {name}"
+    elif language == "ES":
+        return f"Hola, {name}"
+    elif language == "RU":
+        return f"Privet, {name}"
+    elif language == "EN":
+        return f"Hello {name}"
+    else:
+        "unknown language"
+
+print(adv_say_hello("Juliana"))
+print(adv_say_hello("Juliana", "HE"))
