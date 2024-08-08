@@ -4,13 +4,14 @@
 # check user input for move possibility (only " " items) - FIXED
 # check user input for validity (1, 2, 3) - FIXED
 # game repeat (y/n) - FIXED
-# alternating first move
+# alternating first move - FIXED
 
 row_1 = ["X", "0", "0"]
 row_2 = [" ", "X", " "]
 row_3 = ["0", " ", " "]
 
 is_game_over = False
+last_winner = ""
 
 def display_board(row_1, row_2, row_3):
     top_bottom = "*****************"
@@ -88,11 +89,13 @@ def check_win(player):
     win_check_list = [row_1.count(player), row_2.count(player), row_3.count(player), col_1.count(player), col_2.count(player), col_3.count(player), diag_1.count(player), diag_2.count(player)]
     
     global is_game_over
-
+    global last_winner
 
     if 3 in win_check_list:
         print(f"Player {player} is the winner!")
         is_game_over = True
+        last_winner = player
+
         
     if (row_1.count(" ") + row_2.count(" ") + row_3.count(" ")) == 0 and 3 not in win_check_list:
             is_game_over = True
@@ -114,12 +117,20 @@ def play():
     print("Welcome to TIC TAC TOE")
     display_board(row_1, row_2, row_3)
     
-    while not is_game_over:
-        player_input("X")
-        check_win("X")
-        if not is_game_over:
-            player_input("O")
-            check_win("O")
+    if last_winner != "X":
+        while not is_game_over:
+            player_input("X")
+            check_win("X")
+            if not is_game_over:
+                player_input("O")
+                check_win("O")
+    else:
+        while not is_game_over:
+            player_input("0")
+            check_win("0")
+            if not is_game_over:
+                player_input("X")
+                check_win("X")
         
     play_again = input("Would you like to play again? (y/n) ")
     if play_again == "y":
@@ -128,3 +139,4 @@ def play():
     
 
 play()
+print(last_winner)
