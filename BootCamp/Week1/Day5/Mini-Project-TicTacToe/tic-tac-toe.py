@@ -3,12 +3,12 @@
 # finish game when tie happens - FIXED
 # check user input for move possibility (only " " items) - FIXED
 # check user input for validity (1, 2, 3) - FIXED
-# game repeat (y/n)
+# game repeat (y/n) - FIXED
 # alternating first move
 
-row_1 = [" ", " ", " "]
-row_2 = [" ", " ", " "]
-row_3 = [" ", " ", " "]
+row_1 = ["X", "0", "0"]
+row_2 = [" ", "X", " "]
+row_3 = ["0", " ", " "]
 
 is_game_over = False
 
@@ -28,37 +28,50 @@ def display_board(row_1, row_2, row_3):
 {display_row_3}
 {top_bottom}
 ''')
+    
+def get_row_input():
+    accepted_values = ["1","2","3"]
+    row = input("Enter row (1 - 3): ")
+
+    while row not in accepted_values:
+        row = input("Invalid input, use numbers (1 - 3), enter row: ")
+
+    row = int(row)
+    return row
+
+def get_col_input():
+    accepted_values = ["1","2","3"]
+    col = input("Enter column (1 - 3): ")
+
+    while col not in accepted_values:
+        col = input("Invalid input, use numbers (1 - 3), enter column: ")
+
+    col = int(col)
+    return col
+
 
 def player_input(player):
-    accepted_input = ["1", "2", "3"]
-
-    row = input(f"Player {player}, enter row (1 - 3): ")
-    if row not in accepted_input:
-        print("You need to input 1, 2 or 3.")
-        player_input(player)
-
-    column = input(f"Player {player}, enter column (1 - 3): ")    
-    if column not in accepted_input:
-        print("You need to input 1, 2 or 3.")
-        player_input(player)
+    print(f"Your move {player}.")
+    row = get_row_input()
+    col = get_col_input()
     
-    column_number = int(column)
+    column_index = col - 1
 
-    if row == "1":
-        if row_1[column_number - 1] == " ":
-            row_1[column_number - 1] = player
+    if row == 1:
+        if row_1[column_index] == " ":
+            row_1[column_index] = player
         else:
             print("You cannot make this move, this field is already taken.")
             player_input(player)
-    elif row == "2":
-        if row_2[column_number - 1] == " ":
-            row_2[column_number - 1] = player
+    elif row == 2:
+        if row_2[column_index] == " ":
+            row_2[column_index] = player
         else:
             print("You cannot make this move, this field is already taken.")
             player_input(player)
-    elif row == "3":
-        if row_3[column_number - 1] == " ":
-            row_3[column_number - 1] = player
+    elif row == 3:
+        if row_3[column_index] == " ":
+            row_3[column_index] = player
         else:
             print("You cannot make this move, this field is already taken.")
             player_input(player)
@@ -76,19 +89,29 @@ def check_win(player):
     
     global is_game_over
 
-    if (row_1.count(" ") + row_2.count(" ") + row_3.count(" ")) == 0:
-            is_game_over = True
-            print("The game is tied. No winners, no losers.")
 
     if 3 in win_check_list:
         print(f"Player {player} is the winner!")
         is_game_over = True
         
-    
+    if (row_1.count(" ") + row_2.count(" ") + row_3.count(" ")) == 0 and 3 not in win_check_list:
+            is_game_over = True
+            print("The game is tied. No winners, no losers.")
+
+
+def delete_scores():
+    global row_1
+    row_1 = [" ", " ", " "]
+    global row_2
+    row_2 = [" ", " ", " "]
+    global row_3
+    row_3 = [" ", " ", " "]
+    global is_game_over
+    is_game_over = False
+
 
 def play():
     print("Welcome to TIC TAC TOE")
-
     display_board(row_1, row_2, row_3)
     
     while not is_game_over:
@@ -97,5 +120,11 @@ def play():
         if not is_game_over:
             player_input("O")
             check_win("O")
+        
+    play_again = input("Would you like to play again? (y/n) ")
+    if play_again == "y":
+        delete_scores()
+        play()
+    
 
 play()
