@@ -16,8 +16,8 @@ last_winner = ""
 # all the main functions are: display_board(row_1, row_2, row_3), player_input(player), check_win(player) and play()
 # the auxiliary functions are: get_row_input(), get_col_input() and delete_scores()
 def display_board(row_1, row_2, row_3):
-    top_bottom = "*****************"
-    spacer =    "*  ---|---|---  *"
+    top_bottom = "*" * 17
+    spacer =    "*  " + "-" * 3 + "|" + "-" * 3 + "|"+ "-" * 3 + "  *"
     display_row_1 =  f"*   {row_1[0]} | {row_1[1]} | {row_1[2]}   *"
     display_row_2 =  f"*   {row_2[0]} | {row_2[1]} | {row_2[2]}   *"
     display_row_3 =  f"*   {row_3[0]} | {row_3[1]} | {row_3[2]}   *"
