@@ -19,7 +19,7 @@ class Farm:
         
     
     def get_animal_types(self):
-        animal_types = list(self.animals.keys())
+        animal_types = sorted(list(self.animals.keys()))
         return animal_types
 
     def get_short_info(self):
@@ -39,9 +39,9 @@ macdonald.add_animal('sheep')
 macdonald.add_animal('goat', 12)
 macdonald.add_animal("pig", 10)
 
-# macdonald.get_info()
+macdonald.get_info()
 
-# print(macdonald.get_animal_types())
+print(macdonald.get_animal_types())
 
 print(macdonald.get_short_info())
 
