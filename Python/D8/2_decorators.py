@@ -85,7 +85,7 @@ class Rectangle:
     def length(self):
         return self.__length
     
-    @length.setter
+    @length.setter # this would not work without the previous length function with @property decorator
     def length(self, value):
         if value< 0:
             raise ValueError("Length cannot be negative")
@@ -103,4 +103,15 @@ except ValueError as e:
     print(e)
 print(rect.area)
 
+
+class WeatherStation:
+    def __init__(self, temp_celsius):
+        self.temp_cels = temp_celsius
+
+    @property
+    def temp_far(self):
+        return (self.temp_cels * 9/5) + 32
+
+weather = WeatherStation(30)
+print(weather.temp_far)
 
