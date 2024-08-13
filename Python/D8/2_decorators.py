@@ -69,6 +69,38 @@ print(guy.email) # calling the email as a property, not a method, i.e. wothout (
 
 # property is very useful to be a getter of private function
 
+class Rectangle:
+    def __init__(self, length, width):
+        if length < 0 or width < 0:
+            raise ValueError("Length cannot be negative")
+        else:
+            self.__length = length
+            self.__width = width
+    
+    @property
+    def area(self):
+        return self.__length * self.__width
 
+    @property
+    def length(self):
+        return self.__length
+    
+    @length.setter
+    def length(self, value):
+        if value< 0:
+            raise ValueError("Length cannot be negative")
+        self.__length = value
+    
+try:
+    rect = Rectangle(1, 4)
+    rect.length = -1
+except ValueError as e:
+    print(e)
+
+try:
+    rect = Rectangle(3, 4)
+except ValueError as e:
+    print(e)
+print(rect.area)
 
 
