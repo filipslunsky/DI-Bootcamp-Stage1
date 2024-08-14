@@ -88,4 +88,3 @@ t.speed(1)
 
 for circle in turtle_feed:
     t.circle(circle)
-

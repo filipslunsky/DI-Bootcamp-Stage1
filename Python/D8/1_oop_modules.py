@@ -9,6 +9,6 @@ if __name__ == "__main__":
 # stops running the print commands if we import an functions from this file to another one
 
 """from nameoffile import * #imports everything
-                        nameoffunction/class etc.""" # imports a specific function
+                           nameoffunction/class etc.""" # imports a specific function
 
 
