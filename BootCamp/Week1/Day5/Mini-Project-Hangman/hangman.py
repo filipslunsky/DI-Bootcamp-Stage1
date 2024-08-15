@@ -122,6 +122,8 @@ def delete_scores():
     word_letters = []
     global puzzle_letters
     puzzle_letters = []
+    global played_letters
+    played_letters = []
 
 def play():
     pick_word(wordslist)
@@ -144,6 +146,3 @@ def play():
         print("Thank you for playing!")
 
 play()
-
-
-
