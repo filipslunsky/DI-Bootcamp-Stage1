@@ -32,13 +32,19 @@ class Game:
         computer_item = self.get_computer_item()
         game_result = self.get_game_result(user_item, computer_item)
         if game_result == "draw":
-            print(f"You selected {self.translate[user_item]}. The computer selected {self.translate[computer_item]}. You draw.")
+            print(f"""
+Game Result:
+You selected {self.translate[user_item]}. The computer selected {self.translate[computer_item]}. You DRAW.""")
             return "draw"
         elif game_result == "win":
-            print(f"You selected {self.translate[user_item]}. The computer selected {self.translate[computer_item]}. You win.")
+            print(f"""
+Game Result:
+You selected {self.translate[user_item]}. The computer selected {self.translate[computer_item]}. You WIN.""")
             return "win"
         elif game_result == "loss":
-            print(f"You selected {self.translate[user_item]}. The computer selected {self.translate[computer_item]}. You lose.")
+            print(f"""
+Game Result:
+You selected {self.translate[user_item]}. The computer selected {self.translate[computer_item]}. You LOSE.""")
             return "loss"
 
 
