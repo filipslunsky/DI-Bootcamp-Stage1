@@ -30,7 +30,7 @@ def main():
         choice = ""
 
         while True:
-            print("If you want try (a)gain with another word, input 'a', if you wish to (e)xit, input 'e':")
+            print("If you want to try (a)gain with another word, input 'a', if you wish to (e)xit, input 'e':")
             choice = input()
             if choice == "a" or choice == "e":
                 break
