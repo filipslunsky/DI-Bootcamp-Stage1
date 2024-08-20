@@ -77,23 +77,23 @@ WHERE title LIKE 'Ba%';
 -- 10. Write a query which will find the 10 cheapest movies.
 SELECT *
 FROM film
-ORDER BY replacement_cost ASC
+ORDER BY rental_rate ASC
 LIMIT 10;
 
 -- 11. Not satisfied with the results. Write a query which will find the next 10 cheapest movies.
 SELECT *
 FROM film
-ORDER BY replacement_cost ASC
+ORDER BY rental_rate ASC
 LIMIT 10
 OFFSET 10;
 
 -- Bonus: Try to not use LIMIT.
 WITH ranked_films AS (
-    SELECT title, replacement_cost, 
-           ROW_NUMBER() OVER (ORDER BY replacement_cost ASC) AS row_num
+    SELECT title, rental_rate, 
+           ROW_NUMBER() OVER (ORDER BY rental_rate ASC) AS row_num
     FROM film
 )
-SELECT title, replacement_cost
+SELECT title, rental_rate
 FROM ranked_films
 WHERE row_num BETWEEN 11 AND 20;
 
