@@ -13,7 +13,7 @@ last_name VARCHAR(100) NOT NULL
 CREATE TABLE customer_profile (
 customer_profile_id SERIAL PRIMARY KEY,
 isLoggedIn BOOLEAN DEFAULT false,
-customer_id SMALLINT,
+customer_id SMALLINT UNIQUE,
 FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
 )
 
