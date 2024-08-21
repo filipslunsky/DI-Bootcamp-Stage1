@@ -64,59 +64,72 @@ class MinimumBalanceAccount(BankAccount):
             raise Exception("unauthenticated access")
 
 
-# PART III - updated previous parts
-# test of part III
-test_account = BankAccount(1000, "filip", "1234")
-print(test_account.authenticated)
-
-# test_account.authenticate("filip", "12345")
-# print(test_account.authenticated)
-
-# test_account.authenticate("filip", "1234")
-# print(test_account.authenticated)
-
-# test_account.deposit(200)
-
-# PART IV - BONUS
-# class ATM:
-#     def __init__(self, account_list, try_limit):
-#         self.account_list = account_list
-#         self.try_limit = 2
-#         if type(try_limit) != int:
-#             raise Exception("you need to input a number for try limit")
-#         elif try_limit <= 0:
-#             raise Exception("the number of try limit needs to be positive")
-#         else:
-#             self.try_limit = try_limit
-#         self.current_tries = 0
-#         self.show_main_menu()
+# IV - BONUS
+class ATM:
+    def __init__(self, account_list, try_limit):
+        self.account_list = []
+        for account in account_list:
+            if isinstance(account, BankAccount):
+                self.account_list.append(account)
+        if try_limit > 0:
+            self.try_limit = try_limit
+        else:
+            raise Exception("the limit of tries needs to be a positive number")
+        self.current_tries = 0
+        self.show_main_menu()
     
-#     def show_main_menu(self):
-#         while True:
-#             menu_choice = input("Do you want to (l)og in or (e)xit? ")
-#             if menu_choice == "l":
-#                 username = input("enter your username: ")
-#                 password = input("enter your password: ")
-#                 self.log_in(username, password)
-#                 break
-#             elif menu_choice == "e":
-#                 break
-#             else:
-#                 continue
-    
-#     def log_in(self, username, password):
-#         for account in self.account_list:
-#             if username == account.username:
-#                 while self.current_tries < self.try_limit:
-#                     account.authenticate(username, password)
-#                     if account.authenticated:
-#                         # self.show_account_menu(self)
-#                     else:
-#                         self.current_tries += 1
-#                         print("wrong password or username")
-                        
-#                 else:
-#                     print("too many wrong tries, sorry")
-            
-# test_account_list = [test_account]
-# test_atm = ATM(test_account_list, 3)
+    def show_main_menu(self):
+        while True:
+            print("YOUR ATM WELCOMES YOU")
+            choice = input("Do you want to (l)og in or (e)xit? ")
+            if choice == "l":
+                while True:
+                    username = input("What is your username? ")
+                    for account in self.account_list:
+                        if account.username == username:
+                            while self.current_tries <= self.try_limit:
+                                password = input("What is your password? ")
+                                if account.password == password:
+                                    self.log_in(username, password)
+                                    break
+                                else:
+                                    print("wrong password")
+                                    self.current_tries += 1
+                            else:
+                                print("Sorry, you have tried too many times, we are logging you out.")
+                    break
+                break
+            elif choice == "e":
+                print("Have a good day.")
+                break
+
+
+    def log_in(self, username, password):
+        for account in self.account_list:
+            if account.username == username:
+                account.authenticate(username, password)
+                self.show_account_menu(account)
+
+    def show_account_menu(self, account):
+        while True:
+            print(f"What do you want to do today, {account.username}? ")
+            choice = input("(w)ithdraw or (d)eposit or (e)xit? ")
+            if choice == "w":
+                amount = int(input("How much would you like to withdraw? "))
+                account.withdraw(amount)
+            elif choice == "d":
+                amount = int(input("How much would you like to deposit? "))
+                account.deposit(amount)
+            elif choice == "e":
+                print(f"It was pleasure to be doing business with you today, {account.username}")
+                break
+
+
+
+acc1 = BankAccount(1000, "joey", "jjj")
+acc2 = BankAccount(1200, "ross", "rrr")
+acc3 = BankAccount(1100, "monica", "mmm")
+account_list = [acc1, acc2, acc3]
+
+my_atm = ATM(account_list, 3)
+
