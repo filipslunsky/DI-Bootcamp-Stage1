@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+<body>
+    <div id="container">Users:</div>
+<ul class="list">
+    <li>John</li>
+    <li>Pete</li>
+</ul>
+<ul class="list">
+    <li>David</li>
+    <li>Sarah</li>
+    <li>Dan</li>
+</ul>
+<script>
+    const myDiv = document.getElementById("container"); // 1 printing div to the console
+    console.log(myDiv)
+    document.querySelector("ul").children[1].innerHTML = "Richard"; // 2 changing Pete for Richard
+    const listItems = document.querySelectorAll("li"); // 3 removing Sarah
+    listItems.forEach((item) => {
+    if (item.textContent === "Sarah") {
+        item.remove();
+    }
+    });
+    const lists = document.querySelectorAll('ul'); // 4 changing first list items fo my name
+    lists.forEach((list) => {
+    const firstItem = list.querySelector('li');
+    if (firstItem) {
+        firstItem.textContent = 'Filip';
+    }
+    });
+    lists.forEach((list) => {
+        list.setAttribute("class", "student-list") // 1 adding a class "student-list" to both lists
+    });
+    lists[0].setAttribute("class", "student-list university attendance"); // 2 adding more classes to the first list
+    myDiv.style.backgroundColor = "lightBlue"; // 1 adding background color
+    myDiv.style.padding = "35px"; // adding padding
+    listItems.forEach((item) => {  // 2 hiding Dan
+            if (item.textContent === "Dan") {
+                item.style.display = "none";
+            }
+    });
+    listItems.forEach((item) => { // 3 adding the border to Richard
+        if (item.textContent === "Richard") {
+            item.style.border = "3px solid black"
+        }
+    });
+    let myBody = document.querySelector("body"); // 4. changing font size of the whole body
+    myBody.style.fontSize = "25px";
+
+</script>
+</body>
+</html>
