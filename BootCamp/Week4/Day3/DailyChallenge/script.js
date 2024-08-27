@@ -3,11 +3,11 @@ const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uran
 let mySection = document.querySelector("section");
 const colors = ["darkGray", "yellow", "lightBlue", "red", "orange", "gold", "blue", "darkblue"];
 
-for (let i = 0; i < planets.length; i++) {          // THESE LINES
-    let planet = document.createElement("div");     // NEED TO BE COMMENTED OUT
-    planet.setAttribute("class", "planet");         // FOR THE BONUS
-    planet.style.backgroundColor = colors[i];       // PART WITH THE MOONS
-    mySection.appendChild(planet)                   // TO WORK
+for (let i = 0; i < planets.length; i++) {          
+    let planet = document.createElement("div");     
+    planet.setAttribute("class", "planet");
+    planet.style.backgroundColor = colors[i];       
+    mySection.appendChild(planet)                   
 }
 
 
