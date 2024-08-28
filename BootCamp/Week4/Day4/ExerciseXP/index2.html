@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work with forms</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="firstname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lastname"><br><br>
+        <input type="submit" value="Submit" id="submit">
+      </form> 
+      <ul class="usersAnswer"></ul>
+      <script>
+        // Retrieve the form and console.log it.
+        let myForm = document.querySelector("form");
+        console.log(myForm)
+
+        // Retrieve the inputs by their id and console.log them.
+        let inputFirstNameID = document.getElementById("fname");
+        let inputLastNameID = document.getElementById("lname");
+        console.log(inputFirstNameID)
+        console.log(inputLastNameID)
+
+        // Retrieve the inputs by their name attribute and console.log them
+        let inputFirstNameName = document.getElementsByName("firstname")[0];
+        let inputLastNameName = document.getElementsByName("lastname")[0];
+        console.log(inputFirstNameName)
+        console.log(inputLastNameName)
+
+        // When the user submits the form (ie. submit event listener)
+        let answerList = document.querySelector("ul");
+        myForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            let firstNameValue = inputFirstNameID.value.trim();
+            let lastNameValue = inputLastNameID.value.trim();
+
+            if (firstNameValue === "" || lastNameValue === "") {
+            alert("Please fill in both fields.");
+            return;
+            }
+
+            let firstNameLI = document.createElement("li");
+            firstNameLI.textContent = firstNameValue;
+            answerList.appendChild(firstNameLI);
+
+            let lastNameLI = document.createElement("li");
+            lastNameLI.textContent = lastNameValue;
+            answerList.appendChild(lastNameLI);
+
+            myForm.reset();
+        });
+      </script>
+</body>
+</html>
