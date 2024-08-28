@@ -41,3 +41,20 @@ function swapCase(sentence) {
 console.log(swapCase("The Quick Brown Fox"))
 
 // Exercise 4
+function isOmnipresent(testList, testArg) {
+    let results = 0;
+    for (let item of testList) {
+        if (testArg in item) {
+            results += 1;
+        }
+    }
+    if (results === testList.length) {
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 1))
+console.log(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 6))
+
