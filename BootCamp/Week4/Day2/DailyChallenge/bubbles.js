@@ -14,7 +14,7 @@ console.log(joinNumbers)
 joinNumbers = numbers.join("---")
 console.log(joinNumbers)
 
-// 3. Bonus : To do this Bonus look up how to work with nested for loops
+// 3.Bonus : To do this Bonus look up how to work with nested for loops
 // Sort the numbers array in descending order, do so using for loops (Not using built-in sort methods).
 // The output should be: [9,8,7,6,5,4,3,2,1,0]
 

@@ -1,0 +1,160 @@
+.container {
+    display: grid;
+    grid-template-columns: 180px 740px;
+    grid-template-rows: 500px;
+    grid-template-areas: "palette table";
+    margin: 0;
+    padding: 0;
+}
+
+.palette {
+    grid-area: palette;
+    width: 180px;
+    height: 500px;
+    background-color: #a9a9a9;
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "clear-button clear-button clear-button"
+        "colors colors colors";
+}
+
+.clear-button {
+    grid-area: clear-button;
+    height: 50px;
+    font-size: 20px;
+    border: 1px solid #004cc6;
+    border-radius: 5px;
+    margin: 5px;
+}
+.colors {
+    grid-area: colors;
+    background-color: #a9a9a9;
+    height: 440px;
+    display: grid;
+    grid-template-areas:
+        "color-1 color-2 color-3"
+        "color-4 color-5 color-6"
+        "color-7 color-8 color-9"
+        "color-10 color-11 color-12"
+        "color-13 color-14 color-15"
+        "color-16 color-17 color-18"
+        "color-19 color-20 color-21";
+}
+
+.color {
+    height: 52px;
+    width: 52px;
+    border: 1px solid black;
+    margin: 3px;
+}
+
+#color-1 {
+    grid-area: color-1;
+    background-color: #e93f33;
+}
+
+#color-2 {
+    grid-area: color-2;
+    background-color: #e94033;
+}
+
+#color-3 {
+    grid-area: color-3;
+    background-color: #f3a433;
+}
+#color-4 {
+    grid-area: color-4;
+    background-color: #fdf731;
+}
+#color-5 {
+    grid-area: color-5;
+    background-color: #9ace32;
+}
+#color-6 {
+    grid-area: color-6;
+    background-color: #90ee90;
+}
+#color-7 {
+    grid-area: color-7;
+    background-color: #418207;
+}
+#color-8 {
+    grid-area: color-8;
+    background-color: #6ce1d1;
+}
+#color-9 {
+    grid-area: color-9;
+    background-color: #76f9fb;
+}
+#color-10 {
+    grid-area: color-10;
+    background-color: #87cefa;
+}
+#color-11 {
+    grid-area: color-11;
+    background-color: #258ffb;
+}
+#color-12 {
+    grid-area: color-12;
+    background-color: #244afc;
+}
+#color-13 {
+    grid-area: color-13;
+    background-color: #0e258b;
+}
+#color-14 {
+    grid-area: color-14;
+    background-color: #4e2782;
+}
+#color-15 {
+    grid-area: color-15;
+    background-color: #8d338c;
+}
+#color-16 {
+    grid-area: color-16;
+    background-color: #ea82ee;
+}
+#color-17 {
+    grid-area: color-17;
+    background-color: #f3b5c1;
+}
+#color-18 {
+    grid-area: color-18;
+    background-color: #d3d3d3;
+}
+#color-19 {
+    grid-area: color-19;
+    background-color: #d3d3d3;
+}
+#color-20 {
+    grid-area: color-20;
+    background-color: #000000;
+}
+#color-21 {
+    grid-area: color-21;
+    background-color: #ffffff;
+}
+#table-area {
+    grid-area: table;
+    width: 740px;
+    height: 480px;
+    background-color: #a9a9a9;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 10px 1px;
+
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #a9a9a9;
+    box-sizing: border-box;
+    background-color: white;
+}
