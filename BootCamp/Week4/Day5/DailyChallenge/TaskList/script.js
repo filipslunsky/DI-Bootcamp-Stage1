@@ -26,6 +26,7 @@ function addTask(e) {
     let newXButton = document.createElement("button");
     newXButton.classList.add("button-x","red-x-button");
     newXButton.id = task.id;
+    newXButton.addEventListener("click", deleteTask);
     newTaskDiv.appendChild(newXButton);
     
     let newIcon = document.createElement("i");
@@ -38,7 +39,7 @@ function addTask(e) {
     newCheckbox.name = "task-done";
     newCheckbox.classList.add("task-check");
     newCheckbox.id = task.id;
-    newCheckbox.addEventListener("change", doneTask)
+    newCheckbox.addEventListener("change", doneTask);
     newTaskDiv.appendChild(newCheckbox);
 
     newTaskText = document.createElement("p");
@@ -71,3 +72,27 @@ function doneTask(e) {
     }
 }
 
+function deleteTask(e) {
+    let taskId = e.target.id;
+    for (let i = 0; i < tasks.length; i++) {
+        if (tasks[i].id == taskId) {
+            tasks.splice(i, 1);
+        }
+    }
+    let taskToDelete = document.getElementById(taskId);
+    taskToDelete.remove();
+}
+
+let clearButton = document.getElementById("clear-button");
+clearButton.addEventListener("click", clearAllTasks);
+
+function clearAllTasks() {
+    while (tasks.length > 0) {
+        tasks.pop();
+    }
+    
+    let taskList = document.getElementsByClassName("listTasks")[0];
+    while (taskList.firstChild) {
+        taskList.removeChild(taskList.firstChild);
+    }
+}
