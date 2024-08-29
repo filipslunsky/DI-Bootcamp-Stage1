@@ -1,0 +1,88 @@
+body {
+    background-image: linear-gradient(#e94348, #ea577d);
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    display: inline;
+    padding-left: 10px;
+}
+
+form, .listTasks, .footer-controls {
+    background-color: white;
+    padding: 30px;
+    width: 300px;
+}
+
+form {
+    margin-bottom: 10px;
+}
+
+.listTasks {
+    padding-bottom: 0;
+}
+
+
+.footer-controls {
+    margin-bottom: 500px;
+    height: auto;
+    padding-top: 0;
+}
+
+.crossed-out {
+    color: #ea4f46;
+    text-decoration: line-through;
+}
+
+#add-button {
+    border: none;
+    color: #60aafc;
+    background-color: white;
+    font-size: 18px;
+}
+
+#newtask {
+    height: 25px;
+    width: 80%;
+    border: none;
+    font-size: 20px;
+}
+
+#clear-button {
+    font-size: 15px;
+    color: #e94348;
+    border: none;
+    padding-left: 265px;
+    padding-top: 10px;
+}
+
+.button-x {
+    color: white;
+    background-color: #e94348;
+    border: none;
+    border-radius: 3px;
+    height: 20px;
+    width: 20px;
+}
+
+.blue-line {
+    background-color: #9ac8fc;
+    
+}
+
+hr {  
+    height: 1px;  
+    border: none;
+    margin-bottom: 3px;
+}
