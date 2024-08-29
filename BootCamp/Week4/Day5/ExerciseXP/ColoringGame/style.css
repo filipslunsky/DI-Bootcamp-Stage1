@@ -20,7 +20,7 @@
         "colors colors colors";
 }
 
-.clear-button {
+#clear-button {
     grid-area: clear-button;
     height: 50px;
     font-size: 20px;
