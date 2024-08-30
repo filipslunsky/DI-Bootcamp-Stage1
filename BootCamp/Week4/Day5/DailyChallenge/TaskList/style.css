@@ -20,7 +20,7 @@ p {
 }
 
 form, .listTasks, .footer-controls {
-    background-color: white;
+    background-color: #ffffff;
     padding: 30px;
     width: 300px;
 }
@@ -48,7 +48,7 @@ form {
 #add-button {
     border: none;
     color: #60aafc;
-    background-color: white;
+    background-color: #ffffff;
     font-size: 18px;
 }
 
