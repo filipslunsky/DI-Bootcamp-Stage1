@@ -72,6 +72,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let color21 = document.getElementById("color-21");
     color21.addEventListener("click", getColor)
 
+    
+    let isMouseDown = false;
+
     function changeColor(e) {
         if (isMouseDown) {
             e.target.style.backgroundColor = color;
@@ -102,8 +105,6 @@ for (let i = 0; i < 24; i++) {
     }
     document.addEventListener("mousedown", handleMouseDown);
     document.addEventListener("mouseup", handleMouseUp);
-
-    let isMouseDown = false;
     
     let myButton = document.getElementById("clear-button");
     myButton.addEventListener("click", function () {
