@@ -36,7 +36,7 @@ const vegetarian = ["vegetable", "houmous", "eggs", "vanilla", "potatoes" ];
 for (let meal of menu) {
     let isVegetarian = false;
     for (let item of vegetarian) {
-        if (meal.name.toLocaleLowerCase().includes(item)) {
+        if (meal.name.toLowerCase().includes(item)) {
             isVegetarian = true;
             break;
         }
