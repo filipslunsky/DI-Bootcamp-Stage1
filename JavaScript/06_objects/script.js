@@ -115,8 +115,101 @@ console.log(student5)
 const {age, name} = student;
 console.log(age, name);
 
-const example = ({name, age}) => { // can be destructured in a parameter of a function
-    console.log(name, age);
+const example = ({name, age, address:{city}}) => { // can be destructured in a parameter of a function
+    console.log(name, age, city);
 };
 example(student);
 
+// CLASSES
+// they are objects that have simplified process of making instances compared to cloning an object
+// template objects
+
+class NameOfClass {
+    constructor(name, age){ // arrow function cannot be used for constructor
+        this.name = name;
+        this.age = age;
+        this.gender = 'F'
+    }
+    method() {}
+    method2 = () => {}
+    getName(){ // getter of a class
+        return this.name;
+    }
+    setName(value){ // setter of a class
+        this.name = value;
+    }
+};
+
+
+class Animal {
+    constructor(type, name){
+        this.name = name;
+        this.type = type;
+    }
+    getType() {
+        return this.type;
+    }
+
+    getName() {
+        return this.name;
+    }
+}
+const myDog = new Animal('Dog', 'Shadow');
+const urDog = new Animal('Dog', 'Spots');
+const myCat = new Animal('Cat', 'Thomas');
+
+console.log(myDog.getName());
+console.log(urDog.getName());
+console.log(myCat.getName(), myCat.getType());
+
+let animalArr = [myDog, urDog, myCat];
+console.log(animalArr);
+
+class Dog extends Animal {
+    constructor(name, color) {
+        super("Dog", name); // calls parent constructor and sends the data there (sth like __init__ in Python)
+        this.color = color;
+    }
+    getColor() {
+        return this.color;
+    }
+    getName() { // using the same method name will override the parent method
+        return `I love my ${this.name}`;
+    }
+}
+
+const labrador = new Dog('Kuku');
+console.log(labrador.getType(), labrador.getName());
+
+// exercise
+/**
+ * Create a User class
+ * Store the name of the user in a "name" variable
+ * Add hello method that will log 'Hello' and the name of the user
+ * Create a Student class that exetends User
+ * Create 3 instances of Student class, add them to an Array
+ * Loop the array and call hello method
+ */
+
+class User {
+    constructor(name) {
+        this.name = name;
+    }
+    sayHello() {
+        return `Hello ${this.name}!`
+    }
+};
+
+class Student extends User {
+    constructor(name) {
+        super(name);
+    }
+};
+
+let studentArr = [
+new Student('John'),
+new Student('Jim'),
+new Student('Jack')
+];
+
+studentArr.forEach(student => console.log(student.sayHello()));
