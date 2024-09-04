@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/JavaScript/07_http_get_post/script.js" defer async></script>
+</head>
+<h2>Forms, JSON, Exceptions</h2>
+<!-- HTTP METHOD 
+GET - sending in the URL
+POST - sending in the body
+
+RESPONSES:
+200 etc. OK
+300 etc. REDIRECT
+400 etc. FAIL
+500 etc. SERVER PROBLEM
+
+-->
+
+<form method="POST">
+    <input type="text" name="name" placeholder="Name" />
+    <input type="password" name="password" placeholder="Password" />
+    <input type="submit" value="Send" />
+</form>
+<h2>Get a User</h2>
+<form method="GET" action="https://jsonplaceholder.typicode.com/users">
+    <input type="number" name="id" />
+    <input type="submit" />
+</form>
+<h2>Google Search</h2>
+<form method="GET" action="https://www.google.com/search">
+    <input type="text" name="q" />
+    <input type="submit" />
+</form>
+<h2>POST Request</h2>
+<form action="https://jsonplaceholder.typicode.com/posts" method="post">
+    <input type="text" name="userId" placeholder="user ID" />
+    <input type="text" name="title" placeholder="title" />
+    <input type="text" name="body" placeholder="body..." />
+    <input type="submit" />
+</form>
+<h2>Add a POST</h2>
+<form action="https://users-18kl.onrender.com/user" method="post">
+    <input type="text" name="email" placeholder="email" />
+    <input type="text" name="username" placeholder="username" />
+    <input type="text" name="name" placeholder="name" />
+    <input type="submit">
+
+</form>
+<body>
+    
+</body>
+</html>
