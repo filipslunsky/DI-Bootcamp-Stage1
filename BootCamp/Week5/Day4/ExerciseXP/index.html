@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises XP</title>
+    <script src="/BootCamp/Week5/Day4/ExerciseXP/script.js" defer async></script>
+</head>
+<body>
+    <h2>Exercise 1</h2>
+    <form action="/index.html" method="get">
+        <label for="name">Name</label>
+        <br>
+        <input type="text" name="name" id="name" placeholder="John" />
+        <br>
+        <label for="comments">Comments</label>
+        <br>
+        <textarea name="comments" id="comments" placeholder="Hello, this is a comment" rows="5" cols="16"></textarea>
+        <br>
+        <input type="submit" value="Send">
+        <!-- Where will the sent data appear? 
+         the data goes to the URL after ?, e.g.: ?name=Jane&comments=lorem+ipsum
+         -->
+    </form>
+    <h2>Exercise 2</h2>
+    <form action="index.html" method="post">
+        <label for="name">Name</label>
+        <br>
+        <input type="text" name="name" id="name" placeholder="John" />
+        <br>
+        <label for="comments">Comments</label>
+        <br>
+        <textarea name="comments" id="comments" placeholder="Hello, this is a comment" rows="5" cols="16"></textarea>
+        <br>
+        <input type="submit" value="Send">
+        <!-- Where will the sent data appear? 
+         the data goes to the body of the request, it can be seen in the network in the browser (Payload tab), e.g.:
+        name: John
+        comments: lorem ipsum
+        -->
+    </form>
+
+</body>
+</html>
