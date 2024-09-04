@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.generalContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quoteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    border: 25px solid brown;
+    width: 500px;
+    background-color: bisque;
+}
+
+#quotes {
+    font-size: 50px;
+}
+
+#quoteText {
+    font-size: 25px;
+    width: 350px;
+    color: grey;
+}
+
+#quoteAuthor {
+    padding-left: 150px;
+    font-size: 25px;
+    color: aquamarine;
+}
+
+#generate {
+    width: 250px;
+    height: 50px;
+    background-color: aqua;
+    font-size: 25px;
+    color: white;
+}
+
+#infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+#myQuotesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+}
+
+.infoButton {
+    width: 300px;
+    height: 30px;
+}
+
+#searchAuthorInput {
+    padding-right: 300px;
+    margin: 5px 3px 5px 20px;
+}
+
+#next, #previous {
+    width: 200px;
+    margin: 25px;
+    color: white;
+}
+
+#previous {
+    background-color: pink;
+}
+
+#next {
+    background-color: blue;
+}
+
+#search {
+    margin-right: 15px;
+}

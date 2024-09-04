@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quotes</title>
+    <link rel="stylesheet" href="/BootCamp/Week5/Day4/ExerciseXP-MiniProject/style.css">
+</head>
+<body>
+    <section>
+        <div class="generalContainer">
+            <div class="quoteContainer">
+                <button id="generate">Generate Quote</button>
+                <p id="quoteText">
+                    <span id="quotes">"</span><span id="quoteSentence"></span>
+                </p>
+                <p id="quoteAuthor">
+                </p>
+            </div>
+            <div id="infoContainer">
+
+            </div>
+        <div id="formContainer">
+            <h3>Add a New Quote</h3>
+            <form id="addQuoteForm">
+                <input type="text" id="newQuoteText" name="newQuoteText" placeholder="quote">
+                <br>
+                <input type="text" id="newQuoteAuthor" name="newQuoteAuthor" placeholder="author">
+                <br>
+                <input type="submit" value="Add a New Quote" id="add">
+            </form>
+        </div>
+        <div id="infoContainer">
+            <button class = "infoButton" id="countCharSpace">Count Characters (incl. spaces)</button>
+            <p id="countCharSpaceResult"></p>
+            <button class = "infoButton" id="countCharNoSpace">Count Characters (without spaces)</button>
+            <p id="countCharNoSpaceResult"></p>
+            <button class = "infoButton" id="countWords">Count Words</button>
+            <p id="countWordsResult"></p>
+            <button class = "infoButton" id="likeQuote">Like Quote</button>
+            <p id="likeQuoteResult"></p>
+        </div>
+        <div id="myQuotesContainer">
+            <h3>My Quotes</h3>
+            <h5>Inspirational, motivational and more !</h5>
+            <p id="authorQuote"></p>
+            <p id="authorName"></p>
+            <form id="searchAuthor">
+                <input type="text" id="searchAuthorInput">
+                <input class="searchButton" type="submit" id="search" value="Search">
+                <br>
+                <button class="searchButton" id="previous">Previous</button>
+                <button class="searchButton" id="next">Next</button>
+            </form>
+        </div>
+        </div>
+        
+    </section>
+    <script src="/BootCamp/Week5/Day4/ExerciseXP-MiniProject/script.js"></script>
+</body>
+</html>
