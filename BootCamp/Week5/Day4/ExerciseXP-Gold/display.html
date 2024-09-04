@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+</head>
+<body>
+    <section>
+        <p>FIRST NAME: <span id="first-name"></span>
+            <br>
+            LAST NAME: <span id="last-name"></span>
+        </p>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="/BootCamp/Week5/Day4/ExerciseXP-Gold/index.html">Back to the form</a>
+    <script>
+        function getQueryParameters() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                firstName: params.get("firstName"),
+                lastName: params.get("lastName")
+            };
+        }
+
+        const queryData = getQueryParameters();
+
+        document.getElementById("first-name").textContent = queryData.firstName;
+        document.getElementById("last-name").textContent = queryData.lastName;
+    </script>
+</body>
+</html>
