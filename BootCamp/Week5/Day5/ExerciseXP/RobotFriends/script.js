@@ -76,8 +76,9 @@ const displayCards = robotArray => {
     robotArray.forEach(item => {
         html += `<div class="card">
             <img src = "${item.image}">
-            <p class = "robot-name">${item.name}</p>
-            <p class = "robot-email">${item.email}</p>
+            <p><span class = "robot-name">${item.name}</span>
+            <br>
+            <span class = "robot-email">${item.email}</span></p>
         </div>`
     });
     document.getElementById('cards').innerHTML = html;
