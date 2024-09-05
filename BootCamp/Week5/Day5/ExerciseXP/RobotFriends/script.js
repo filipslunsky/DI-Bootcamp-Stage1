@@ -88,8 +88,15 @@ displayCards(robots);
 
 
 const searchInput = document.querySelector("input");
-searchInput.addEventListener("input", function () {
+searchInput.addEventListener("input", () => {
     let searchValue = searchInput.value.trim().toLocaleLowerCase();
     let filteredRobots = robots.filter(item => item.name.toLocaleLowerCase().includes(searchValue));
     displayCards(filteredRobots);
+    if (filteredRobots.length === 0) {
+        let resultArea = document.getElementById('cards');
+        let newParagraph = document.createElement('p');
+        newParagraph.classList.add("no-results");
+        newParagraph.textContent = 'Sorry, no RoboFriends of this name have been found:-(';
+        resultArea.appendChild(newParagraph);
+    }
 });

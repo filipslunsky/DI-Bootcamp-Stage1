@@ -1,3 +1,9 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -6,7 +12,7 @@ nav {
     background: #72e083 url(/BootCamp/Week5/Day5/ExerciseXP/RobotFriends/img/gears.png);
     background-size: contain;
     background-blend-mode: luminosity;
-    width: 99%;
+    width: 100%;
     height: 150px;
     position: fixed;
     top: 0px;
@@ -36,6 +42,7 @@ input {
 #cards {
     margin-top: 150px;
     padding-top: 20px;
+    min-height: 800px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -48,6 +55,7 @@ input {
     background: #5ac2c5 url(/BootCamp/Week5/Day5/ExerciseXP/RobotFriends/img/card-pattern.png);
     margin: 15px;
     border-radius: 10px;
+    max-height: 390px;
 }
 
 img {
@@ -55,6 +63,10 @@ img {
     width: 300px;
     border-radius: 150px;
     margin: 15px;
+}
+
+p {
+    margin-bottom: 12px;
 }
 
 .robot-name {
@@ -66,4 +78,10 @@ img {
 .robot-email {
     margin-left: 15px;
     font-size: 13px;
+}
+
+.no-results {
+    margin-top: 150px;
+    font-size: 35px;
+    color: red;
 }
