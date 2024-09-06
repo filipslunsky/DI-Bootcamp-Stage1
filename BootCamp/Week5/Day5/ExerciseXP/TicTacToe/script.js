@@ -196,7 +196,7 @@ const evaluateStatus = () => {
     || (playerSide === status.f1 && playerSide === status.f5 && playerSide === status.f9)
     || (playerSide === status.f3 && playerSide === status.f5 && playerSide === status.f7)) {
         console.log("You have won!");
-        finishGame();
+        finishGame('w');
         return false;
     } else if ((computerSide === status.f1 && computerSide === status.f2 && computerSide === status.f3)
         || (computerSide === status.f4 && computerSide === status.f5 && computerSide === status.f6)
@@ -207,7 +207,7 @@ const evaluateStatus = () => {
         || (computerSide === status.f1 && computerSide === status.f5 && computerSide === status.f9)
         || (computerSide === status.f3 && computerSide === status.f5 && computerSide === status.f7)) {
             console.log("You have lost!");
-            finishGame();
+            finishGame('l');
         return false;
     } else if ((status.f1 === 'X' || status.f1 === 'O')
     && (status.f2 === 'X' || status.f2 === 'O')
@@ -219,7 +219,7 @@ const evaluateStatus = () => {
     && (status.f8 === 'X' || status.f8 === 'O')
     && (status.f9 === 'X' || status.f9 === 'O')) {
         console.log("The game is tied.");
-        finishGame();
+        finishGame('t');
         return false;
     } else {
         return true;
@@ -239,8 +239,76 @@ const scanField = () => {
     return fieldObj;
 };
 
-const finishGame = () => {
+const finishGame = (resultStatus) => {
     for (let i = 1; i <= 9; i++) {
         document.getElementById(`field${i}`).style.pointerEvents = 'none';
-     }
+    }
+    if (resultStatus === 'w' || resultStatus === 'l') {
+        colorFields(resultStatus);
+    };
+    displayEndMessage(resultStatus);
+};
+
+const colorFields = resultStatus => {
+    let color = '';
+    if (resultStatus === 'w') {
+        color = 'green';
+    } else {
+        color = 'red';
+    }
+    let status = scanField();
+    if (status.f1 === status.f2 && status.f2 === status.f3 && (status.f1 === 'X' || status.f1 === 'O')) {
+        document.getElementById('field1').style.backgroundColor = color;
+        document.getElementById('field2').style.backgroundColor = color;
+        document.getElementById('field3').style.backgroundColor = color;
+    } else if (status.f4 === status.f5 && status.f5 === status.f6 && (status.f4 === 'X' || status.f4 === 'O')) {
+        document.getElementById('field4').style.backgroundColor = color;
+        document.getElementById('field5').style.backgroundColor = color;
+        document.getElementById('field6').style.backgroundColor = color;
+    } else if (status.f7 === status.f8 && status.f8 === status.f9 && (status.f7 === 'X' || status.f7 === 'O')) {
+        document.getElementById('field7').style.backgroundColor = color;
+        document.getElementById('field8').style.backgroundColor = color;
+        document.getElementById('field9').style.backgroundColor = color;
+    } else if (status.f1 === status.f4 && status.f4 === status.f7 && (status.f1 === 'X' || status.f1 === 'O')) {
+        document.getElementById('field1').style.backgroundColor = color;
+        document.getElementById('field4').style.backgroundColor = color;
+        document.getElementById('field7').style.backgroundColor = color;
+    } else if (status.f2 === status.f5 && status.f5 === status.f8 && (status.f2 === 'X' || status.f2 === 'O')) {
+        document.getElementById('field2').style.backgroundColor = color;
+        document.getElementById('field5').style.backgroundColor = color;
+        document.getElementById('field8').style.backgroundColor = color;
+    } else if (status.f3 === status.f6 && status.f6 === status.f9 && (status.f3 === 'X' || status.f3 === 'O')) {
+        document.getElementById('field3').style.backgroundColor = color;
+        document.getElementById('field6').style.backgroundColor = color;
+        document.getElementById('field9').style.backgroundColor = color;
+    } else if (status.f1 === status.f5 && status.f5 === status.f9 && (status.f1 === 'X' || status.f1 === 'O')) {
+        document.getElementById('field1').style.backgroundColor = color;
+        document.getElementById('field5').style.backgroundColor = color;
+        document.getElementById('field9').style.backgroundColor = color;
+    } else if (status.f3 === status.f5 && status.f5 === status.f7 && (status.f3 === 'X' || status.f3 === 'O')) {
+        document.getElementById('field3').style.backgroundColor = color;
+        document.getElementById('field5').style.backgroundColor = color;
+        document.getElementById('field7').style.backgroundColor = color;
+    }
+};
+
+const displayEndMessage = resultStatus => {
+    let endMessage = '';
+    if (resultStatus === 'w') {
+        endMessage = 'You have won!';
+    } else if (resultStatus === 'l') {
+        endMessage = 'You have lost!';
+    } else if (resultStatus === 't') {
+        endMessage = 'The game is tied!';
+    };
+
+    let targetElement = document.getElementById('game-field');
+    let newParagraph = document.createElement('p');
+    newParagraph.textContent = endMessage;
+    targetElement.appendChild(newParagraph);
+    let playAgain = document.createElement('p');
+    playAgain.textContent = 'PLAY AGAIN';
+    playAgain.style.cursor = 'pointer';
+    playAgain.addEventListener("click", () => location.reload());
+    targetElement.appendChild(playAgain);
 };
