@@ -299,7 +299,7 @@ const displayEndMessage = resultStatus => {
     } else if (resultStatus === 'l') {
         endMessage = 'You have lost!';
     } else if (resultStatus === 't') {
-        endMessage = 'The game is tied!';
+        endMessage = 'The game is tied.';
     };
 
     let targetElement = document.getElementById('game-field');
