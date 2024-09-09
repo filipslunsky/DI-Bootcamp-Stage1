@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#word {
+    width: 250px;
+    height: 30px;
+}
+
+#get-button, button {
+    height: 36px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+button {
+    margin: 20px;
+}
+
+#get-button {
+    background-color: green;
+}
+
+#delete-all {
+    background-color: red;
+}
+
+img {
+    max-width: 400px;
+    max-height: 300px;
+    border-radius: 15px;
+}
+
+.gif-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+

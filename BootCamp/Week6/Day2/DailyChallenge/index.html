@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random GIFs</title>
+    <script src="/BootCamp/Week6/Day2/DailyChallenge/script.js" defer async></script>
+    <link rel="stylesheet" href="/BootCamp/Week6/Day2/DailyChallenge/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Random GIFs</h1>
+        <form onsubmit="addGif(event)">
+            <input type="text" name="word" id="word">
+            <input type="submit" value="Get a GIF" id="get-button">
+        </form>
+        <button id="delete-all">DELETE ALL GIFs</button>
+        <div id="gifs"></div>
+    </div>
+</body>
+</html>
