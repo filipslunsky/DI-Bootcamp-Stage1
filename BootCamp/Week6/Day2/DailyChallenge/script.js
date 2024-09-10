@@ -16,7 +16,6 @@ const addGif = event => {
                     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
                     .join('&');
     };
-    let url = `${mainUrl}?${createQueryString(params)}`;
 
     let response = fetch(`${mainUrl}?${createQueryString(params)}`);
 
