@@ -232,3 +232,16 @@ flipButton.addEventListener('click', (e) => {
     myForm.from.value = toCurrency;
     myForm.to.value = fromCurrency;
 })
+
+
+// optional functionality for the flip button to aslo immediately convert the given amount
+// flipButton.addEventListener('click', e => {
+//     e.preventDefault();
+
+//     const myForm = document.querySelector('form');
+//     let fromCurrency = myForm.from.value;
+//     let toCurrency = myForm.to.value;
+//     let amount =myForm.amount.value;
+
+//     getResult(fromCurrency, toCurrency, amount);
+// });
