@@ -194,8 +194,6 @@ submitButton.addEventListener('click', e => {
     let toCurrency = myForm.to.value;
     let amount =myForm.amount.value;
 
-    // myForm.reset();
-
     getResult(fromCurrency, toCurrency, amount);
 });
 
