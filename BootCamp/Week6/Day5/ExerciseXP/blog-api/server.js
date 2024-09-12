@@ -35,7 +35,7 @@ app.get('/posts/:id', (req, res) => {
     console.log(req.params);
     const { id } = req.params;
     const myBlog = data.find(item => item.id == id);
-    
+    // finish handling wrong request
     
     res.send(myBlog);
 });
