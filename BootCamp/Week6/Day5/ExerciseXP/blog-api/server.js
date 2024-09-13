@@ -56,8 +56,24 @@ app.post('/posts', (req, res) => {
 app.put('/posts/:id', (req, res) => {
     const { id } = req.params;
     const { title, content } = req.body;
-    console.log(id);
-    console.log(title);
-    console.log(content);
-    res.send('success');
+    const indx = data.findIndex(item => item.id == id);
+    data[indx] = {...data[indx], title, content};
+    if (indx === -1) {
+        return res.status(404).json({message: 'blog to update not found'})
+    };
+    res.json(data);
+});
+
+
+// deleting existing post
+app.delete('/posts/:id', (req, res) => {
+    const { id } = req.params;
+    const { title, content } = req.body;
+    const indx = data.findIndex(item => item.id == id);
+    data[indx] = {...data[indx], title, content};
+    if (indx === -1) {
+        return res.status(404).json({message: 'blog to delete not found'})
+    };
+    data.splice(indx, 1);
+    res.json(data);
 });
