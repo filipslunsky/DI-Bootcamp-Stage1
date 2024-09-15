@@ -10,4 +10,5 @@ const fetchPosts = async () => {
     }
 };
 
+
 export { fetchPosts };
