@@ -25,23 +25,23 @@ const scores = [
     {
         id: 1,
         name: 'Jack',
-        score: 3
+        score: 0.8
     },{
         id: 2,
         name: 'Halloran',
-        score: 2
+        score: 0.33
     },{
         id: 3,
         name: 'Wendy',
-        score: 1
+        score: 0.6
     },{
         id: 4,
         name: 'Danny',
-        score: 3
+        score: 0.23
     },{
         id: 5,
         name: 'Redrum',
-        score: 2
+        score: 0.56
     }
 ];
 
