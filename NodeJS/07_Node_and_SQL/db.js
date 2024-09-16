@@ -75,3 +75,31 @@ db('products')
 .catch(e => {
     console.log(e);  
 });
+
+// the autocommit can be controlled using "rollback"/"commit" (more in Transactions)
+
+const test = async () => {
+    try {
+        const trx = await db.transaction();
+
+        const product3 = await db('products')
+        .insert({name: 'proudct 3', price: 12345}, ['id'])
+        .transacting(trx)
+
+        console.log('proudct 3=>', product3);
+        
+        const product4 = await db('products')
+        .insert({name: 'proudct 4', price: 54321}, ['id'])
+        .transacting(trx)
+
+        console.log('proudct 4=>', product4);
+
+        await trx.commit();
+
+    } catch (e) {
+        console.log(e);
+        await trx.rollback();
+    }
+}
+
+test();
