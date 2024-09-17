@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "do more coding",
+    "description": "JS is fun",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "title": "do extra coding",
+    "description": "JS is hard",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "title": "do more extra coding",
+    "description": "JS is really hard",
+    "completed": false
+  }
+]
