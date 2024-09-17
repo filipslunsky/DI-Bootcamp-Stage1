@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "username": "johnnydoe",
+    "password": "$2b$10$O3ZPPXP0T5Pch81D5R/EEuSf2.htZcxuZGY.uuOP3wtVdCun5lJFW"
+  },
+  {
+    "id": 2,
+    "username": "jennyroe",
+    "password": "$2b$10$kLRbxB.DvlQ415UTRw3g7.ijkiJisP2asyyUVY9kBYneLqbPYAafa"
+  },
+  {
+    "id": 3,
+    "username": "rondow",
+    "password": "$2b$10$iQZ33adS8/Ch22Dnu7DJSeYEAW6V1iHFSZC35AW07h.8Klz7K6W7i"
+  },
+  {
+    "id": 4,
+    "username": "donrow",
+    "password": "$2b$10$2IBgQzaDueQtmL3Bm7RNke9yr10SgiPZMvZrvdG9fc7MadAzASwJC"
+  },
+  {
+    "id": 5,
+    "username": "jimlow",
+    "password": "$2b$10$NrtwvNV3MxEQPEXX92vlNOE2QC.v1KX4adJjHZCQmQxlF5BdAokUS"
+  },
+  {
+    "id": 6,
+    "username": "test1",
+    "password": "$2b$10$/f.oOIfErFOFC8nZ4xcIJO1Li05RIr7Jzmnc/7cVrPATkr7pP0c86"
+  },
+  {
+    "id": 7,
+    "username": "test2",
+    "password": "$2b$10$hm.tAvoZnS6hXdOhVBe6z.WqsAyRpRia6Bk7s2LFgyo0HXJdRlhWq"
+  },
+  {
+    "id": 8,
+    "username": "test3",
+    "password": "$2b$10$bVPdXzCUfuDh6qdjyCthiuczQGtk1AdsCicm/CwnTW0KI7KE32duG"
+  },
+  {
+    "id": 9,
+    "username": "test4",
+    "password": "$2b$10$vRowcdQRX1mg9G2C/ryK3eZiNs4QXI/T.Bp/M0ZkqwyqQzmqP9xnK"
+  },
+  {
+    "id": 10,
+    "username": "test5",
+    "password": "$2b$10$gdfG8bTFNPHUVaspSvpmXeETIUBbqYTW1JcplKDZEne36K2ruBwF2"
+  },
+  {
+    "id": 11,
+    "username": "jimbo",
+    "password": "$2b$10$QqSZ7uOA2ogbHxzDu4dmc.qSLnWQqy9y1DYUi9jwA3ZpzlmiG5VIK"
+  },
+  {
+    "id": 12,
+    "username": "jamie",
+    "password": "$2b$10$V9I6WyKJnWDpu2wjzut59uHxTm1SOf9MymKM8LadEeNgiNse00mT6"
+  },
+  {
+    "id": 13,
+    "username": "test10",
+    "password": "$2b$10$jov1VV1RO2V2dAf7jU1S.efomDj36V/phW7HmjnA9ZwF41.oqMBIm"
+  },
+  {
+    "id": 14,
+    "username": "test11",
+    "password": "$2b$10$V6l.k/.eEwrRSeLeOlFTCu0D.RJiLFPLa1PNCI9fMXrzgCjCtNKxC"
+  },
+  {
+    "id": 15,
+    "username": "test12",
+    "password": "$2b$10$RGUx23kpM9R25YrOV3RIcOqqOizXIDPsmHBO6o3/b080fOJNvIfBy"
+  },
+  {
+    "id": 16,
+    "username": "dinasmith",
+    "password": "$2b$10$cdiwivsnDwt5UU5QtYyAzemMTc4hJy4mB2CLdaHrmile9c2Zq04vC"
+  },
+  {
+    "id": 17,
+    "username": "danny",
+    "password": "$2b$10$naV2.xK7pAfdOwtU9cshQO9vP9mm0/TN0E9RQT0oCE5lnMh0rBdrK"
+  },
+  {
+    "id": 18,
+    "username": "tony",
+    "password": "$2b$10$VrRRgDhMl9.Wd7/NiNt7jO7y2xMmD/iSvhrRF6IqCvkiQRt.HUHwy"
+  },
+  {
+    "id": 19,
+    "username": "donna",
+    "password": "$2b$10$42I2uRr2TgktUFYeJeQgw.u9/anKzh0WNRyDIFG3h7PPiUNRzbxnW"
+  },
+  {
+    "id": 20,
+    "username": "petenew",
+    "password": "$2b$10$I9ucEFXr99kIzIHO9ZcvGuDgSEfH67UvXnUNoTFEDMNnbLTvB6Jjm"
+  }
+]
