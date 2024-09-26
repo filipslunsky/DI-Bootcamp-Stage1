@@ -16,6 +16,30 @@ const Shop = (props) => {
         }
     };
 
+    const addProduct = async (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const price = e.target.price.value;
+        const description = e.target.description.value;
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({name, price, description}),
+        };
+        const url = 'http://127.0.0.1:3001/products';
+        try {
+           const res = await fetch(url, options);
+           const data = await res.json();
+           setProducts(data);
+        } catch (error) {
+            console.log(error);
+        }
+        
+        
+    };
+
     useEffect(() => {
         getAll();
     }, []);
@@ -23,6 +47,12 @@ const Shop = (props) => {
     return (
         <>
         <h2>My Shop</h2>
+        <form onSubmit={(e) => {addProduct(e)}}>
+            <input type="text" name='name' placeholder='name' />
+            <input type="text" name='price' placeholder='price' />
+            <textarea name="description" placeholder='description here' id=""></textarea>
+            <input type="submit" />
+        </form>
         {products.map(item => {
             return (
                 <div key={item.id} className='card'>

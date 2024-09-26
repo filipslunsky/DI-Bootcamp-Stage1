@@ -45,9 +45,9 @@ const searchProduct = (req, res) => {
 
 const createProduct = async (req, res) => {
   console.log(req.body);
-  const { name, price } = req.body;
+  const { name, price, description } = req.body;
   try {
-    const data = await _createProduct(name, price);
+    const data = await _createProduct(name, price, description);
     // res.json(data);
     getAllProducts(req,res)
   } catch (error) {

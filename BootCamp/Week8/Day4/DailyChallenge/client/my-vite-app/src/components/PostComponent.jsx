@@ -25,6 +25,7 @@ class PostComponent extends React.Component {
         try {
             const res = await fetch('http://127.0.0.1:3200/api/world', options);
             const data = await res.json();
+
             this.setState({message: `I received your POST request. This is what you sent me: ${data.message}`});
         } catch (error) {
             console.log(error);

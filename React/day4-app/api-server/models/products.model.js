@@ -8,8 +8,8 @@ const _getProductById = (id) => {
   return db("products").where({ id });
 };
 
-const _createProduct = (name, price) => {
-  return db("products").insert({ name, price }, ["id", "name", "price"]);
+const _createProduct = (name, price, description) => {
+  return db("products").insert({ name, price, description }, ["id", "name", "price"]);
 };
 
 module.exports = {
