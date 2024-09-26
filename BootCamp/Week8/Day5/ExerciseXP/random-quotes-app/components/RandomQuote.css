@@ -1,0 +1,35 @@
+.main {
+    transition: background-color 1s ease;
+}
+
+.container {
+    width: 560px;
+    height: auto;
+    border-radius: 20px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.align-right {
+    text-align: right;
+}
+
+h1 {
+    font-size: 35px;
+    margin: 15px;
+}
+
+p {
+    font-size: 20px;
+    margin: 15px;
+}
+
+button {
+    font-size: 15px;
+    padding: 9px;
+    margin: 15px;
+    border: 2px solid blue;
+    border-radius: 8px;
+}
