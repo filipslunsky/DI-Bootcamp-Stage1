@@ -6,6 +6,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  background-image: url('./assets/sky.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .navItem {
   background-color: blue;
   text-decoration: none;
@@ -25,4 +32,57 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  margin: 5px;
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.searchButton, .favoritesButton, .removeButton {
+  height: 40px;
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.searchButton {
+  background-color: lightblue;
+}
+
+.favoritesButton {
+  background-color: lightgreen;
+}
+
+.removeButton {
+  background-color: rgb(187, 93, 93);
+  margin-bottom: 20px;
+}
+
+.weatherDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.favoritesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 550px;
 }

@@ -42,6 +42,9 @@ const Home = (props) => {
 
     const handleClick = async (e) => {
         e.preventDefault();
+        if (inputs.city === ''|| inputs.countryCode === '') {
+            return;
+        }
         const {city, countryCode} = inputs;
         const newWeather = await getWeatherData(city, countryCode);
         setWeather(newWeather);
@@ -56,23 +59,28 @@ const Home = (props) => {
     };
 
     const addToFavorites = (city, countryCode) => {
+        if (inputs.city === ''|| inputs.countryCode === '') {
+            return;
+        }
         setFavorites(favoritesData.push({city, countryCode}));
         console.log(favoritesData);
     };
 
     return (
         <>
-            <h2>{weather.city}, {weather.countryCode}</h2>
-            <p>{weather.description}</p>
-            <p><span>Min.: {weather.minTempCel} °C</span> <span>Max.: {weather.maxTempCel} °C</span></p>
-
-            {isInFavorites(weather.city, weather.countryCode) ? '' : <button onClick={() => addToFavorites(weather.city, weather.countryCode)}>Add to Favorites</button>}
+            <h1>Search for a city</h1>
             <ErrorBoundary>
                 <form>
                     <input onInput={(e) => {handleInput(e)}} type="text" name='city' placeholder="city" />
                     <input onInput={(e) => {handleInput(e)}} type="text" name='countryCode' placeholder="country code" />
-                    <button onClick={(e) => {handleClick(e)}}>Search Weather</button>
+                    <button className="searchButton" onClick={(e) => {handleClick(e)}}>Search Weather</button>
                 </form>
+            <div className="weatherDisplay"></div>
+                <h2>{weather.city}, {weather.countryCode}</h2>
+                <p>{weather.description}</p>
+                <p><span>Min.: {weather.minTempCel} °C</span> <span>Max.: {weather.maxTempCel} °C</span></p>
+            {isInFavorites(weather.city, weather.countryCode) ? '' : <button className="favoritesButton" onClick={() => addToFavorites(weather.city, weather.countryCode)}>Add to Favorites</button>}
+            <div className="weatherDisplay"></div>
             </ErrorBoundary>
         </>
     );

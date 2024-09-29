@@ -34,22 +34,27 @@ const Favorites = (props) => {
 
     return (
         <>
-            <h2>Weather in Favorite Cities</h2>
-            {weathers.length === 0 ? <p>You have no favorite locations</p> : ''}
-            {
-                weathers.map((item, index) => {
-                    return (
-                        <div key={index}>
-                            <ErrorBoundary>
-                                <h2>{item.city}, {item.countryCode}</h2>
-                                <p>{item.description}</p>
-                                <p><span>Min.: {item.minTempCel} °C</span> <span>Max.: {item.maxTempCel} °C</span></p>
-                                <button onClick={() => removeLocation(item.city, item.countryCode)}>Remove from favorites</button>
-                            </ErrorBoundary>
-                        </div>
-                    );
-                })
-            }
+            <h1>Weather in Favorite Cities</h1>
+            <div className="favoritesContainer">
+                {weathers.length === 0 ? <p>You have no favorite locations</p> : ''}
+                {
+                    weathers.map((item, index) => {
+                        return (
+
+                            <div className="weatherDisplay" key={index}>
+                                <ErrorBoundary>
+                                    <div>
+                                        <h2>{item.city}, {item.countryCode}</h2>
+                                        <p>{item.description}</p>
+                                        <p><span>Min.: {item.minTempCel} °C</span> <span>Max.: {item.maxTempCel} °C</span></p>
+                                        <button className="removeButton" onClick={() => removeLocation(item.city, item.countryCode)}>Remove from favorites</button>
+                                    </div>
+                                </ErrorBoundary>
+                            </div>
+                        );
+                    })
+                }
+            </div>
         </>
     );
 }
