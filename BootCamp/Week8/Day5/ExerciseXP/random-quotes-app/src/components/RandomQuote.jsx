@@ -1,5 +1,5 @@
-import quotes from "../src/assets/QuotesDatabase.jsx";
-import colors from "../src/assets/ColorsDatabase.jsx";
+import quotes from "../assets/QuotesDatabase.jsx";
+import colors from "../assets/ColorsDatabase.jsx";
 import { useState } from 'react';
 import './RandomQuote.css';
 
