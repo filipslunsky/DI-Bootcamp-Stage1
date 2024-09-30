@@ -13,7 +13,7 @@ export const taskReducer = (state = initialState, action) => {
             return {...state,
                 tasks: state.tasks.map(task =>
                     task.id === action.payload.id
-                        ? { ...task, task: action.payload.task, date: action.payload.date }
+                        ? { ...task, task: action.payload.task, date: action.payload.date, edit: false }
                         : task
                 ),
             };
