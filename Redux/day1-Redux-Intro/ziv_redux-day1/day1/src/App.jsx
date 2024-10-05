@@ -2,14 +2,14 @@ import Counter from "./components/Counter";
 import InputText from "./components/InputText";
 import { useState } from "react";
 import "./App.css";
-import { useSelector } from "react-redux";
+import { useSelector, connect } from "react-redux";
 
-function App() {
+function App(props) {
   const [count, setCount] = useState(0);
-  const title = useSelector(state => state.textReducer.text)
+  // const title = useSelector(state => state.textReducer.text)
   return (
     <>
-      <h2>{title}</h2>
+      <h2>{props.myTitle}</h2>
       <button onClick={() => setCount((prev) => prev + 1)}> + </button>
       {count}
       <button onClick={() => setCount((prev) => prev - 1)}> - </button>
@@ -17,6 +17,12 @@ function App() {
       <InputText/>
     </>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    myTitle: state.textReducer.text,
+  };
+};
+
+export default connect(mapStateToProps)(App);
