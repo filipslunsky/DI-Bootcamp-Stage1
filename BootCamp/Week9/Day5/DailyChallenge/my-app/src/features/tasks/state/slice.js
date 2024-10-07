@@ -14,7 +14,6 @@ const tasksSlice = createSlice({
     initialState,
     reducers: {
         addTask: (state, action) => {
-            console.log(action.payload);
             state.tasks.push({
                 id: state.nextTaskId,
                 name: action.payload.name,
@@ -22,7 +21,6 @@ const tasksSlice = createSlice({
                 completed: false
             });
             state.nextTaskId++;
-            console.log(state.tasks);
         },
         editTask: (state, action) => {
             const { id, name, category } = action.payload;
