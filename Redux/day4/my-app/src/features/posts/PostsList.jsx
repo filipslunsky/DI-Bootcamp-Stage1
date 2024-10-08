@@ -1,17 +1,15 @@
 import { useEffect } from 'react';
-import { useSelector, useDispatch } from "react-redux";
-import { fetchPosts } from './state/slice';
 import ReactionButton from './ReactionButton';
-import { selectPosts, selectStatus } from './state/selectors';
+import { usePostsSelector, usePostsStatus, useFetchPosts } from './state/hooks';
 
 const PostsList = (props) => {
-    const posts = useSelector(selectPosts);
-    const status = useSelector(selectStatus);
+    const posts = usePostsSelector();
+    const status = usePostsStatus();
   
-    const dispatch = useDispatch();
+    const callFetchPosts = useFetchPosts();
 
     useEffect(() => {
-        dispatch(fetchPosts());
+        callFetchPosts();
       }, []);
     
     if (status === "loading") return <h2>Loading...</h2>;
