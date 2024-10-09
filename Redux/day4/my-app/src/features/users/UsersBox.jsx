@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
-import { useUsersSelector, useUsersStatus, useFetchUsers } from './state/hooks';
+import { useUsersSelector, useUsersStatus, useFetchUsers, useSelectAuthor, useSelectedAuthor } from './state/hooks';
 
-const UsersSelect = (props) => {
+const UsersBox = (props) => {
     const users = useUsersSelector();
     const status = useUsersStatus();
   
     const callFetchUsers = useFetchUsers();
+    const callSelectAuthor = useSelectAuthor();
 
     useEffect(() => {
         callFetchUsers();
@@ -20,7 +21,7 @@ const UsersSelect = (props) => {
     return (
         <>
             <h2>Authors</h2>
-            <select>
+            <select onChange={(e) => callSelectAuthor(e.target.value)}>
                 <option value={-1}>Select user...</option>
                 {
                     users.map(user => {
@@ -34,4 +35,4 @@ const UsersSelect = (props) => {
     );
 }
  
-export default UsersSelect;
+export default UsersBox;
