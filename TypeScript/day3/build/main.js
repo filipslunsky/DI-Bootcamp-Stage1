@@ -130,4 +130,13 @@ const post2 = {
     title: 'title 2',
     body: 'whatever',
 };
-const updatePost = (post, update) => { };
+const updatePost = (post, update) => {
+    return Object.assign(Object.assign({}, post), update);
+};
+console.log(updatePost(post1, { body: 'gfhdafjhasfgjkhsgfjh' }));
+const createUser = (name, age, active) => {
+    return { name, age, active };
+};
+const anneParam = ["Anne", 15, true];
+const newUser = createUser(...anneParam);
+console.log(newUser);

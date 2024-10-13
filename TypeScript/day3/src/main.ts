@@ -224,4 +224,38 @@ const post2: PartialPost = {
     body: 'whatever',
 };
 
-const updatePost = (post: PostT, update: PartialPost) => {};
+const updatePost = (post: PostT, update: PartialPost) => {
+    return {...post, ...update};
+};
+
+console.log(updatePost(post1, {body: 'gfhdafjhasfgjkhsgfjh'}));
+
+
+// pick or omit
+type MiniPost = Pick<PostT, "id" | "title">
+type OtherPost = Omit<PostT, "title">
+
+// Exclude or Extract
+type Grades = "A" | "B" | "C" | "D" | "F"
+type PassGrade = Exclude<Grades, "D" | "F">
+
+type FailedGade = Extract<Grades, "D" | "F">
+
+// NonNullable
+type NullableString = string | null | undefined
+type NoNullableString = NonNullable<NullableString>
+
+// ReturnType
+const createUser = (name: string, age: number, active: boolean) => {
+    return {name, age, active};
+};
+
+type UserObjectType = ReturnType<typeof createUser>
+
+// Parameters
+type UserParams = Parameters<typeof createUser>
+
+const anneParam: UserParams = ["Anne", 15, true];
+
+const newUser: UserObjectType = createUser(...anneParam);
+console.log(newUser);
