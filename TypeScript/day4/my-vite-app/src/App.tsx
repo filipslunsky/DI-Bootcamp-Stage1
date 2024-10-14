@@ -2,12 +2,12 @@ import { useState,
   useEffect,
   useRef,
   useMemo,
-  ChangeEvent,
+  // ChangeEvent,
   ChangeEventHandler,
   useCallback,
   MouseEvent,
   KeyboardEvent,
-  useContext,
+  // useContext,
   createContext
  } from 'react';
 import './App.css';
@@ -24,17 +24,17 @@ type AuthContextT = {
 
 export const AppContext = createContext<AuthContextT | null>(null);
 
-interface User {
-  id: number;
-  username: string;
-};
+// interface User {
+//   id: number;
+//   username: string;
+// };
 
 function App() {
   const [count, setCount] = useState<number>(0);
-  const [users, setUsers] = useState<User[] | null>(null);
+  // const [users, setUsers] = useState<User[] | null>(null);
 
   const inputRef = useRef<HTMLInputElement>(null);
-  const numRef = useRef<number>(0);
+  // const numRef = useRef<number>(0);
 
   useEffect(() => {
     return (): void => console.log('unmounting');
