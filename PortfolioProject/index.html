@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filip Slunsky - Portfolio</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    
+    <!-- Link to Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Link to Google Fonts (Raleway) -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Link to your main.css for custom styles -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Filip Slunsky</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+    <section id="header" class="d-flex justify-content-center align-items-center text-white">
+        <div class="overlay"></div>
+        <div class="container text-center position-relative">
+            <h1 class="display-4">Welcome to My Portfolio</h1>
+            <p class="lead">I am a lawyer who has become junior full-stack developer with experience in IT project management.</p>
+            <!-- Bubbles sub-section -->
+            <div class="bubbles-container">
+                <span class="bubble">PostgreSQL</span>
+                <span class="bubble">Python</span>
+                <span class="bubble">HTML</span>
+                <span class="bubble">CSS</span>
+                <span class="bubble">JavaScript</span>
+                <span class="bubble">TypeScript</span>
+                <span class="bubble">React</span>
+                <span class="bubble">Redux Toolkit</span>
+                <span class="bubble">Bootstrap</span>
+                <span class="bubble">Materialize</span>
+                <span class="bubble">NodeJS</span>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">About Me</h2>
+            <img src="img/profile.png" class="profile-img" alt="profile image">
+            <p class="text-center">I am Filip Slunsky, a <strong>Junior Full-Stack Developer</strong> with a rather unconventional journey into tech. I started my career as a <strong>lawyer</strong> (yes, really!), but after a few years, I found myself drawn to the world of IT project management, and the rest, as they say, is history (slightly weird history, I know).
+            <br>
+            <br>
+            Fast forward to more recent times, and I have transitioned from managing teams of developers and QA professionals to becoming one myself. I have had the privilege of leading agile projects, implementing e-learning solutions at Langino (where I was CEO and co-founder), and gaining hands-on experience in React, Node.js, and SQL, but more importantly agile management,lean start-up strategies and project life-cycle.
+            <br>    
+            <br>    
+            While my journey from a lawyer to a developer might seem like a plot twist, it has been an exciting ride and I have never looked back. Now, I am happier than ever and more than eager to continue growing professionally and contribute to building innovative software that makes a difference.</p>
+        </div>
+    </section>
+    
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center">My Projects</h2>
+            <div class="row">
+                <!-- Project Card -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/project-image.jpg" class="card-img-top" alt="Project Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Title</h5>
+                            <p class="card-text">A short description of the project...</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">How to Contact Me</h2>
+            <p class="text-center">You can reach me at:</p>
+            <ul class="list-unstyled text-center">
+                <li><a href="mailto:fslunsky@gmail.com" class="btn btn-link">fslunsky@gmail.com</a></li>
+                <li><a href="https://github.com/filipslunsky" class="btn btn-link" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/filipslunsky/" class="btn btn-link" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </section>
+    </main>
+    <!-- Footer with copyright -->
+    <footer class="text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Filip Slunsky. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
