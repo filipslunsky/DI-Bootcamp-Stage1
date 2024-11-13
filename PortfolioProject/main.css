@@ -5,7 +5,6 @@ html, body {
     flex-direction: column;
 }
 
-/* Flex container to push the footer to the bottom */
 main {
     flex: 1;
 }
@@ -17,13 +16,13 @@ body {
     font-optical-sizing: auto;
     
 }
-/* Style for header overlay */
+
 #header {
     position: relative;
-    background-image: url('img/headerback.jpg'); /* Add the background image */
-    background-size: cover; /* Ensure the image covers the entire header */
-    background-position: center; /* Center the image */
-    height: 100vh; /* Ensures the header takes up the full viewport height */
+    background-image: url('img/headerback.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
 #header .overlay {
@@ -32,38 +31,33 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);  /* Darker overlay for better contrast */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-/* Ensure the text and content inside the header are always visible above the overlay */
 #header .container {
     z-index: 2;
-    position: relative;  /* Ensures the text sits on top of the overlay */
-    color: #fff; /* Set text color to white for better visibility */
+    position: relative;
+    color: #fff;
 }
 
-/* For the navbar toggle button on mobile */
 .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.1);  /* Subtle border for the toggle button */
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Navbar links on mobile should be spaced well */
 .navbar-nav {
     margin-top: 10px;
 }
 
-/* General spacing between sections */
 section {
     margin: 0;
-    padding-top: 80px; /* Adjust padding to suit your needs */
+    padding-top: 80px;
     padding-bottom: 50px;
 }
 
-/* Mobile-friendly adjustments */
 @media (max-width: 767px) {
     section {
-        margin-bottom: 30px;  /* Less space on smaller screens */
+        margin-bottom: 30px;
     }
     .bubble {
         padding: 10px 15px;
@@ -71,7 +65,6 @@ section {
     }
 }
 
-/* Styling for the project cards */
 .card {
     border: none;
     border-radius: 8px;
@@ -80,20 +73,19 @@ section {
 }
 
 .card:hover {
-    transform: scale(1.05);  /* Slight zoom effect on hover */
+    transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .card-img-top {
     height: 200px;
-    object-fit: cover;  /* Ensures images cover the card without stretching */
+    object-fit: cover;
 }
 
 .card-body {
     padding: 1.5rem;
 }
 
-/* Style for the bubbles container */
 .bubbles-container {
     display: flex;
     justify-content: center;
@@ -102,7 +94,6 @@ section {
     gap: 15px;
 }
 
-/* Style for each bubble */
 .bubble {
     background-color: rgba(149, 181, 216, 0.3);
     color: white;
@@ -116,21 +107,20 @@ section {
 
 .bubble:hover {
     background-color: rgba(126, 169, 216, 0.5);
-    transform: scale(1.1);  /* Slight zoom effect on hover */
+    transform: scale(1.1);
 }
 
 #about, #contact {
-    background-color: #222; /* Dark background to blend with header and footer */
-    color: white; /* White text for better contrast */
+    background-color: #222;
+    color: white;
 }
 
-/* Optional: Make the text more readable */
 #about h2, #contact h2 {
-    color: rgb(92, 92, 154); /* Soft contrasting color for headings */
+    color: rgb(92, 92, 154);
 }
 
 #about p, #contact p, #contact ul a {
-    color: #5f82ba; /* Slightly lighter text for contrast */
+    color: #5f82ba;
 }
 
 .profile-img {
